@@ -74,7 +74,8 @@ class RegistrationForm(forms.ModelForm):
     def clean(self):
         if not self.has_invite and self.cleaned_data.get('email'):
             email = self.cleaned_data.get('email')
-            if not any([re.compile(whitelist.pattern).match(email) for whitelist in EmailPatternWhitelist.objects.all()]):
+            patterns = EmailPatternWhitelist.objects.all()
+            if not any([re.compile(whitelist.pattern).match(email) for whitelist in patterns]):
                 self.add_error('email', 'The email pattern is invalid')
 
             if User.objects.filter(email=email).exists():
@@ -141,10 +142,10 @@ class RegistrationView(FormView):
             token = Token.create_for_user(user)
             token.save()
 
-            user.email_user(
-                'Trojsten Graph - registration confirmation',
-                get_template('people/activation_email.html').render({'token': token.token})
-            )
+            #user.email_user(
+            #    'Spmndag Graph - registration confirmation',
+            #    get_template('people/activation_email.html').render({'token': token.token})
+            #)
             messages.success(self.request, 'Activation link has been sent to your email')
         return super().form_valid(form)
 
