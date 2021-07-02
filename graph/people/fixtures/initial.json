@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$216000$VnOtJV5FQgCI$gSkA15jWTEu8FDDNcgcZ82sOi6BDH3gsbswluI6RAGU=",
-      "last_login": "",
+      "last_login": "2019-10-31T19:14:14.060Z",
       "is_superuser": true,
       "username": "matus",
       "first_name": "",
@@ -12,7 +12,7 @@
       "email": "red@kalab.sk",
       "is_staff": true,
       "is_active": true,
-      "date_joined": "",
+      "date_joined": "2021-7-2T17:00:00.060Z",
       "groups": [],
       "user_permissions": []
     }
