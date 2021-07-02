@@ -3,10 +3,10 @@
     "model": "auth.user",
     "pk": 1,
     "fields": {
-      "password": "pbkdf2_sha256$216000$VnOtJV5FQgCI$gSkA15jWTEu8FDDNcgcZ82sOi6BDH3gsbswluI6RAGU=",
+      "password": "pbkdf2_sha256$216000$rsp5BxfaYz4D$jqzDXSwDN2SaI0EkzodeOsfm6hC96cKEC5fUzXPXw1Y=",
       "last_login": "2019-10-31T19:14:14.060Z",
       "is_superuser": true,
-      "username": "matus",
+      "username": "redder",
       "first_name": "",
       "last_name": "",
       "email": "red@kalab.sk",
